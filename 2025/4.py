@@ -18,7 +18,7 @@ while True:
         if (i, j) == (0, 0):
             continue
         mask = padded[1+i : 1+i + mapa.shape[0], 
-                    1+j : 1+j + mapa.shape[1]]
+                      1+j : 1+j + mapa.shape[1]]
         adjacent += (mask == mapa).astype(int)
 
     removable_mask = ((mapa == "@") & (adjacent < 4))
